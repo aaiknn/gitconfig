@@ -1,0 +1,26 @@
+[init]
+  defaultBranch = main
+[alias]
+  # branch
+  bv = branch --format='%(HEAD) %(color:magenta)%(refname:short)%(color:reset) - %(contents:subject) %(color:yellow)%(committerdate:relative)%(color:reset) %(color:cyan)%(authorname)%(color:reset)' --sort=-committerdate
+
+  # grep
+  ga = grep --untracked --no-exclude-standard
+  gai = grep --invert-match --untracked --no-exclude-standard
+  gi = grep --invert-match
+
+  # log
+  ls = log --pretty=format:'%C(magenta)%h%C(reset) %C(cyan)%cn%C(reset) %C(yellow)%cr%C(reset): %s'
+  lg = log --pretty=format:'%C(magenta)%h%C(reset) %C(red)%D%C(reset) %s %C(cyan)%cn%C(reset) %C(yellow)%cr%C(reset)' --graph
+  lv = log --pretty=format:'Ref: %C(green)%D%C(reset) (%S)%n%nCommit hash: %C(magenta)%H%C(reset) (%h)%nDate: %C(yellow)%cD%C(reset) (%cr)%nCommitter: %C(cyan)%cn%C(reset) <%C(cyan)%ce%C(reset)>%n%nSubject: %s%n%n'
+  lvv = log --pretty=format:'Ref: %C(green)%D%C(reset) (%S)%n%nEncoding: %e%nTree hash: %C(magenta)%T%C(reset)%nCommit hash: %C(magenta)%H%C(reset) (%h)%nDate: %C(yellow)%cD%C(reset) (%cr)%nCommitter: %C(cyan)%cn%C(reset) <%C(cyan)%ce%C(reset)>%n%nSubject: %s%nCommit notes:%N%n%nSignature: %G?%n' --graph --stat
+  lvvv = log --pretty=format:'Ref: %C(green)%D%C(reset) (%S)%n%nEncoding: %e%nTree hash: %C(magenta)%T%C(reset)%nCommit hash: %C(magenta)%H%C(reset) (%h)%nDate: %C(yellow)%cD%C(reset) (%cr)%nCommitter: %C(cyan)%cn%C(reset) <%C(cyan)%ce%C(reset)>%n%nSubject: %s%nSanitised subject: %f%nCommit notes:%N%n%nRaw body: %B%n%nSignature: %G?%nSigner: %GS%nKey: %GK%nKey trust level: %GT%nKey fingerprint: %GF%n%nRaw verification messages: %GG%n' --graph --stat
+
+  # status
+  s = status
+
+  # version control
+  unstage = reset HEAD --
+
+  # identity
+  whoami = config --get-regexp user.*
