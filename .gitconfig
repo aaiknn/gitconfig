@@ -11,6 +11,7 @@
 
   # log
   ls = log --pretty=format:'%C(magenta)%h%C(reset) %C(cyan)%cn%C(reset) %C(yellow)%cr%C(reset): %s'
+  lsv = log --pretty=format:'%C(magenta)%h%C(reset) %C(cyan)%cn%C(reset) %C(yellow)%cr%C(reset): %s' --stat
   lg = log --pretty=format:'%C(magenta)%h%C(reset) %C(red)%D%C(reset) %s %C(cyan)%cn%C(reset) %C(yellow)%cr%C(reset)' --graph
   lv = log --pretty=format:'Ref: %C(green)%D%C(reset) (%S)%n%nCommit hash: %C(magenta)%H%C(reset) (%h)%nDate: %C(yellow)%cD%C(reset) (%cr)%nCommitter: %C(cyan)%cn%C(reset) <%C(cyan)%ce%C(reset)>%n%nSubject: %s%n%n'
   lvv = log --pretty=format:'Ref: %C(green)%D%C(reset) (%S)%n%nEncoding: %e%nTree hash: %C(magenta)%T%C(reset)%nCommit hash: %C(magenta)%H%C(reset) (%h)%nDate: %C(yellow)%cD%C(reset) (%cr)%nCommitter: %C(cyan)%cn%C(reset) <%C(cyan)%ce%C(reset)>%n%nSubject: %s%nCommit notes:%N%n%nSignature: %G?%n' --graph --stat
