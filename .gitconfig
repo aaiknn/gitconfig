@@ -4,6 +4,9 @@
   # branch
   bv = branch --format='%(HEAD) %(color:magenta)%(refname:short)%(color:reset) - %(contents:subject) %(color:yellow)%(committerdate:relative)%(color:reset) %(color:cyan)%(authorname)%(color:reset)' --sort=-committerdate
 
+  # diff
+  dr = diff --cached origin/main
+  
   # grep
   ga = grep --untracked --no-exclude-standard
   gai = grep --invert-match --untracked --no-exclude-standard
